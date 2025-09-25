@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>ROWSPAN AND COLSPAN</title>
+</head>
+<body >
+ <table border="5" width="55%" align="center" bgcolor="gray">
+<tr>
+<th colspan="4">SEMESTER 1</th>
+</tr>
+<tr align="center">
+<th rowspan="2">COURSE CODE</th>
+<th rowspan="2">COURSE NAME</th>
+<th colspan="3">HOURS/WEEK</th></tr>
+
+<tr align="center"><td>L</td>
+<td>T</td>
+<td>P</td></tr>
+
+<tr align="center">
+<td>20MCA101</td>
+<td>MFC</td>
+<td>3</td>
+<td>1</td>
+<td>--</td>
+</tr>
+
+<tr align="center">
+<td>20MCA105</td>
+<td>ADS</td>
+<td>3</td>
+<td>1</td>
+<td>--</td>
+</tr>
+
+<tr align="center">
+<td>20MCA131</td>
+<td>Programming Lab</td>
+<td>0</td>
+<td>3</td>
+<td>1</td>
+</tr>
+
+
+ </table>
+
+</body>
+</html>
