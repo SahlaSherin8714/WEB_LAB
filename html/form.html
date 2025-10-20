@@ -1,57 +1,64 @@
 <html>
 <head>
-<title>Forms</title></head>
+<title>Registration Form</title>
+</head>
+
+<body>
+<center><h2><u>Registration Form</u></h2></center>
 
 <form>
-<br><br>
-<label>Name:</label>
-<input type="text" placeholder="enter your name" ><br><br>
+<label for="name">Name:</label>
+<input type="text" name="name" placeholder="Enter your name"><br><br>
 
-<label>Password:</label>
-<input type="password" placeholder="must be characters"><br><br>
+<label for="password">Password:</label>
+<input type="password" name="password" placeholder="Must contain characters"><br><br>
 
-<label>Mobile No: </label>
-<input type="tel" maxlength="13" value="+91"><br><br>
+<label for="mobile">Mobile No:</label>
+<input type="tel" name="mobile" maxlength="13" value="+91"><br><br>
 
-<label>Address: </label><br>
-<textarea name="address" rows="4" cols="50%"></textarea><br><br>
+<label for="address">Address:</label><br>
+<textarea name="address" rows="4" cols="50"></textarea><br><br>
 
-<label>DOB: </label>
+<label for="dob">Date of Birth:</label>
 <input type="date" name="dob"><br><br>
 
-<label>Email: </label>
-<input type="text" placeholder="Eg.name@gmail.com" ><br><br>
+<label for="email">Email:</label>
+<input type="email" name="email" placeholder="Eg.name@gmail.com" r><br><br>
 
 <label>Gender:</label>
-<label> 
-<input type="radio" name="gender" value="female">Female</label>
+<input type="radio" name="gender" value="female">
+<label for="female">Female</label>
+<input type="radio" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" name="gender" value="others">
+<label for="others">Others</label><br><br>
 
-<label>
-<input type="radio" name="gender" value="male"> Male</label>
-
-<label>
-<input type="radio" name="gender" value="male"> Others</label>
-<br><br>
-
-<label>Nationality:</label>
-<select value="select">
+<label for="nationality">Nationality:</label>
+<select name="nationality">
+<option value="">Select </option>
 <option>India</option>
 <option>USA</option>
 <option>UK</option>
-<option>China</option>
+<option>Austria</option>
 </select><br><br>
 
-
-<label>languages known: </label>
-<label>English</label>
-<input type="checkbox" name="english">
-<label>Dutch</label>
-<input type="checkbox" name="english">
-<label>Spanish</label>
-<input type="checkbox" name="english">
+<fieldset style="width:500px;">
+<legend><b>Languages Known</b></legend>
+<input type="checkbox" name="language" value="English">
+<label for="english">English</label><br>
+<input type="checkbox" name="language" value="Dutch">
+<label for="dutch">Dutch</label><br>
+<input type="checkbox" name="language" value="Spanish">
+<label for="spanish">Spanish</label>
+</fieldset>
 <br><br>
 
-<br><input type="submit" value="Submit"> <input type="button" value="Cancel">
+<input type="submit" value="Submit">
+<input type="reset" value="Cancel">
 
 </form>
+
+</body>
+</html>
+
 </html>
