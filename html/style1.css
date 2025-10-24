@@ -1,0 +1,25 @@
+
+
+ body{
+	background-color:#e0d4e7;}
+  h1{
+	color: #191970; 
+	font-size: 80px;
+	font-family:script;
+	text-align: center;
+	font-style:oblique;}
+  p{
+	color:tomato;
+	font-size: 40px;
+	font-family:times new roman;
+	margin-left: 25px;
+	font-style:italic;}
+  ul{
+	margin-left: 100px; 
+	color: white;
+	font-size: 30px; 
+	font-weight: bold; 
+	list-style-type:square;
+	font-family:arial;}
+
+	
