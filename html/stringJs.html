@@ -1,0 +1,51 @@
+ <html>
+<body>
+<h1>Strings Js</h1>
+<script>
+	document.writeln("<h1>")
+var s1="Welcome to JS Programming"
+	document.writeln(s1,"<br>")
+	document.writeln(typeof s1,"<br>")
+	
+	document.writeln("<h2>")
+	document.writeln("Indexof P is ",s1.indexOf("P"),"<br>")
+	document.writeln("Indexof m is ",s1.lastIndexOf("m"),"<br>")
+	document.writeln("indexof(o)with arguments is ",s1.indexOf("o",3),"<br>")
+	document.writeln("'i' in index position ",s1.search("i"),"<br>")
+	
+	document.writeln("<h3>")
+var s2=`Language "Web Programming"`
+	document.writeln(typeof s2,"<br>")
+	document.writeln("Slice() ",s2.slice(0,13),"<br>")
+	document.writeln("Slice() ",s2.slice(8),"<br>")
+	document.writeln("Slice() ",s2.slice(-12),"<br>")
+	document.writeln("Slice() ",s2.slice(-16,-1),"<br>")
+	
+	document.writeln("<h4>")
+var s3= new String('string objects in JS')
+	document.writeln(s3,"<br>")
+	document.writeln(typeof s3,"<br>")
+	document.writeln(s3.substring(0,13,),"<br>")
+	document.writeln(s3.substr(0,3),"<br>")
+	document.writeln(s3.replace("JS","Java Script"),"<br>")
+	
+	document.writeln("<h5>")
+var s5=" HELLO ";
+	document.writeln(s5.toLowerCase(),"<br>")
+	document.writeln(s2.toUpperCase(),"<br>")
+	document.writeln(s5.concat(s1),"<br>")
+	document.writeln(s5.trim(),"<br>")
+	document.writeln("the character at 3 is",s5.charAt(3),"<br>")
+	document.writeln("charCodeAt: ",s5.charCodeAt(3),"<br>")
+	for(i=0;i<s5.length;++i)
+	{document.writeln(s5[i]+"<br>"); //Accessing the string
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
