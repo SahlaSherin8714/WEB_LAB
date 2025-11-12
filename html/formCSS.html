@@ -2,72 +2,139 @@
 <head>
 <title>Registration Form</title>
 <style>
-body{
-	background-color:#FDE7B3;
-	margin-left:10px;
+body {
+    background-color: #B7B89F;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+}
+fieldset {
+    background-color: #F5F5DC;
+    border-radius: 10px;
+    padding: 20px;
+}
+h2 {
+    color: #2F5755;
+    font-size: 35px;
+    text-align: center;
+}
+label {
+    display: inline-block;
+    width: 180px;
+    font-weight: bold;
+}
+input, textarea{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #2F5755;
+    color: white;
+    border-radius: 5px;
 }
 </style>
+<script>
+function validate() {
+	var name = document.getElementById("name").value;
+	var passwd = document.getElementById("pwd").value;
+	var cpwd = document.getElementById("cpwd").value;
+	var phone = document.getElementById("phone").value;
+	var address = document.getElementById("add").value;
+	var dob = document.getElementById("dob").value;
+	var email = document.getElementById("mail").value;
 
-<link rel="stylesheet" href="form.css">
+	if (name == "") {
+		alert('Name cannot be blank');
+		return false;
+	} 
+	else if (!isNaN(name)) {
+		alert('Name requires alphabets!');
+		return false;
+	}
+	else if (passwd == "") {
+		alert('Enter a Password');
+		return false;
+	}
+	else if (passwd.length < 8) {
+		alert('Password requires at least 8 characters');
+		return false;
+	} 
+	else if (cpwd == "") {
+		alert('Enter your password again for confirmation!');
+		return false;
+	}
+	else if (cpwd != passwd) {
+		alert('Passwords not matching');
+		return false;
+	} 
+	else if (phone == "") {
+		alert('Enter your phone number!');
+		return false;
+	} 
+	else if (isNaN(phone)) {
+		alert('Invalid Phone Number');
+		return false;
+	} 
+	else if (phone.length != 10) {
+		alert('Not a Valid Phone Number (need 10 digits)');
+		return false;
+	} 
+	else if (address == "") {
+		alert("Please enter your address");
+		return false;
+	} 
+	else if (dob == "") {
+		alert("Please enter your date of birth");
+		return false;
+	} 
+	else if (email == "") {
+		alert("Please enter your email");
+		return false;
+	} 
+	else if (email[0] != email[0].toLowerCase()) {
+		alert("First letter must be lowercase in email");
+		return false;
+	} 
+	
+	else {
+		alert('Thank You for Registration');
+		return true;
+	}
+}
+</script>
 </head>
 
 <body>
-<h2 style="color:#696FC7; font-size: 40px;font-family:times new roman;text-align: center;font-style:normal;text-decoration:underline">
-REGISTRATION FORM</h2>
+<form onsubmit="return validate()">
+<fieldset style="width:1000px;">
+<legend>
+<h2 style="color:#2F5755; font-size: 40px;font-family:times new roman;text-align: center;font-style:normal;">
+REGISTRATION FORM</h2></legend>
 
-<form>
-<label >Name:</label>
-<input type="text" name="name" placeholder="Enter your name"><br><br>
+<label>Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
 
-<label >Password:</label>
-<input type="password" name="password" placeholder="Must contain characters"><br><br>
+<label>Password:</label>
+<input type="password" id="pwd" name="password" placeholder="Must contain characters"><br><br>
+
+<label>Confirm Password:</label>
+<input type="password" id="cpwd" name="confirm_password" placeholder="Re-enter password"><br><br>
 
 <label>Mobile No:</label>
-<input type="tel" name="mobile" maxlength="13" value="+91"><br><br>
+<input type="tel" id="phone" name="phone" maxlength="10"><br><br>
 
-<label >Address:</label><br>
-<textarea name="address" rows="4" cols="50"></textarea><br><br>
+<label>Address:</label><br>
+<textarea name="address" id="add" rows="4" cols="50"></textarea><br><br>
 
-<label >Date of Birth:</label>
-<input type="date" name="dob" placeholder=" dd-mm-yyy "><br><br>
+<label>Date of Birth:</label>
+<input type="date" name="dob" id="dob"><br><br>
 
 <label>Email:</label>
-<input type="email" name="email" placeholder="Eg.name@gmail.com" r><br><br>
-
-<label>Gender:</label>
-<input type="radio" name="gender" value="female">
-<label >Female</label>
-<input type="radio" name="gender" value="male">
-<label >Male</label>
-<input type="radio" name="gender" value="others">
-<label >Others</label><br><br>
-
-<label >Nationality:</label>
-<select name="nationality">
-<option value="">Select </option>
-<option>India</option>
-<option>USA</option>
-<option>UK</option>
-<option>Austria</option>
-</select><br><br>
-
-<fieldset>
-<legend><b>Languages Known</b></legend>
-<input type="checkbox" name="language" value="English">
-<label >English</label><br>
-<input type="checkbox" name="language" value="Dutch">
-<label >Dutch</label><br>
-<input type="checkbox" name="language" value="Spanish">
-<label >Spanish</label>
-</fieldset>
-<br><br>
+<input type="email" id="mail" name="email" placeholder="Eg. name@gmail.com"><br><br>
 
 <input type="submit" value="Submit">
 <input type="reset" value="Cancel">
-
+</fieldset>
 </form>
-
 </body>
-</html>
-
 </html>
